@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="keyboard_AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/keyboard_colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/keyboard_colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/keyboard_colorAccent</item>-->
+    <!--</style>-->
+    <style name="keyboard_popupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/keyboard_transparent</item>
+        <item name="android:windowEnterAnimation">@anim/keyboard_anim_start</item>
+        <item name="android:windowExitAnimation">@anim/keyboard_anim_dismiss</item>
+    </style>
+</resources>

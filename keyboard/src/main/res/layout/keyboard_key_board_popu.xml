@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:id="@+id/rl_key"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/keyboard_back_hide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7d7d7d"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/keyboard_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="智能安全加密键盘"
+                android:textColor="#bfbfbf"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/keyboard_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="14dp"
+                android:text="完成"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#555457"/>
+
+        <FrameLayout
+            android:id="@+id/keyboard_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kh.keyboard.CustomKeyboardView
+                android:id="@+id/keyboard_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyBackground="@drawable/keyboard_number_selector_bg"
+                android:keyTextColor="#ffffff"
+                android:keyPreviewLayout="@null"
+                android:background="#7d7d7d"
+                android:visibility="gone" />
+
+            <com.kh.keyboard.CustomKeyboardView
+                android:id="@+id/keyboard_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:background="#7d7d7d"
+                android:focusableInTouchMode="true"
+                android:keyPreviewHeight="90dp"
+                android:keyBackground="@drawable/keyboard_selector_bg"
+                android:keyPreviewLayout="@layout/keyboard_key_preview_layout"
+                android:keyPreviewOffset="45dp"
+                android:keyTextColor="#ffffff"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>
